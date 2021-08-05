@@ -1,0 +1,51 @@
+/* BASE */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root{
+    --corPrincipal: #ea80fc;
+    --corBotoes: #d500f9;
+    --corTextos: rgba(0, 0, 0, 0.8);
+    --corFundo: #651fff;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilização do documento */
+body{
+    background-color: var(--corFundo);
+}
+
+.wrapper{
+    width: 100vw;
+}
+
+.image-wrapper{
+    width: 50vw;
+}
+
+.stopwatch-wrapper{
+    width: 50vw;
+}
+
+.image-wrapper img{
+    width: 400px;
+    height: 300px;
+}
+
+
