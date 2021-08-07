@@ -11,11 +11,11 @@
 }
 
 :root{
-    --corPrincipal: #ea80fc;
-    --corBotoes: #d500f9;
-    --corBotoesHover: #f900d8;
-    --corTextos: rgba(0, 0, 0, 0.5);
-    --corFundo: #651fff;
+    --corPrincipal: #b39ddb;
+    --corBotoes: #7e57c2;
+    --corBotoesHover: #673ab7;
+    --corTextos: white;
+    --corFundo: #9575cd;
 }   
 
 .flex{
