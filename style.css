@@ -1,18 +1,22 @@
 /* BASE */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
+    font-family: poppins, sans-serif;
 }
 
 :root{
     --corPrincipal: #ea80fc;
     --corBotoes: #d500f9;
-    --corTextos: rgba(0, 0, 0, 0.8);
+    --corBotoesHover: #f900d8;
+    --corTextos: rgba(0, 0, 0, 0.5);
     --corFundo: #651fff;
-}
+}   
 
 .flex{
     display: flex;
@@ -33,19 +37,77 @@ body{
 
 .wrapper{
     width: 100vw;
+    height: 100vh;
 }
 
 .image-wrapper{
     width: 50vw;
 }
 
-.stopwatch-wrapper{
-    width: 50vw;
+.image-wrapper img{
+    width: 100%;
+    height: 80vh;
 }
 
-.image-wrapper img{
-    width: 400px;
+.stopwatch-wrapper{
+    width: 50vw;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.stopwatch{
+    width: 300px;
     height: 300px;
+    border-radius: 50%;
+    border: 3px solid var(--corTextos);
+    position: relative;
+}
+
+.numbers-stopwatch{
+    color: var(--corTextos);
+    font-size: 3rem;
+}
+
+.buttons-wrapper{
+    width: 100%;
+    justify-content: space-evenly;
+
+}
+
+.btn{
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    transition: all ease .5s;
+    
+    background: var(--corBotoes);
+    color: white;
+    font-weight: 800;
+    border: none;
+    border-radius: 20px;
+}
+.btn:hover{
+    background-color: var(--corBotoesHover);
+    transform: translate(0, -2px);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    letter-spacing: .5px;
+}
+.btn:active{
+    transform: translate(0, 2px);
+    box-shadow: none;
+}
+
+.circle{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--corPrincipal);
+    clip-path: circle(60% at right 50%);
+    z-index: -1;
 }
 
 
