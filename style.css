@@ -54,7 +54,7 @@ body{
     height: 100%;
     flex-direction: column;
     justify-content: space-evenly;
-    
+    user-select: none;
 }
 
 .stopwatch{
@@ -62,12 +62,14 @@ body{
     height: 300px;
     border-radius: 50%;
     border: 3px solid var(--corTextos);
-    position: relative;
+    justify-content: center;
 }
 
 .numbers-stopwatch{
-    color: var(--corTextos);
-    font-size: 3rem;
+    color: var(--corTextos);    
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
 }
 
 .buttons-wrapper{
