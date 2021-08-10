@@ -1,6 +1,7 @@
 "use strict"
 const buttonStart = document.querySelector('[data-js="start"]')
 const buttonStop = document.querySelector('[data-js="stop"]')
+const buttonReset = document.querySelector('[data-js="reset"]')
 const numbers = document.querySelector('[data-js="numbers"]')
 
 var hours = 0
@@ -11,9 +12,10 @@ var stopWatch = null
 
 function start() {
     stopWatch = setInterval(() => timer(), time);
-    buttonStart.value = 'Start'
-    buttonStop.value = 'Stop'
+    buttonStart.disabled = 'true'
+    verAi()
 }
+
 
 function timer() {
     seconds++
@@ -32,15 +34,29 @@ function timer() {
 
 function stop() {
     clearInterval(stopWatch)
-    textAlternative()
-    reset()
+    buttonStart.disabled = ''
+    buttonStart.style.backgroundColor = '#7e57c2'
 }
 
-function textAlternative() {
-    buttonStart.value = 'Return'
-    buttonStop.value = 'Reset'
+function reset() {
+    clearInterval(stopWatch)
+    hours = 0
+    minutes = 0
+    seconds = 0
+    numbers.innerHTML = '00 : 00 : 00'
+    buttonStart.disabled = ''
+    buttonStart.style.backgroundColor = '#7e57c2'
 }
 
+function verAi() {
+    if (buttonStart.disable == '') {
+        console.log('Enabled');
+    }
+    else {
+        buttonStart.style.backgroundColor = '#9c7ad8'
+    }
+}
 
 buttonStart.addEventListener('click', start)
 buttonStop.addEventListener('click', stop)
+buttonReset.addEventListener('click', reset)

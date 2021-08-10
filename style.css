@@ -11,11 +11,12 @@
 }
 
 :root{
-    --corPrincipal: #b39ddb;
+    --corPrincipal: #512da8;
     --corBotoes: #7e57c2;
     --corBotoesHover: #673ab7;
     --corTextos: white;
-    --corFundo: #9575cd;
+    --corFundo: #5f39b6;
+    
 }   
 
 .flex{
@@ -42,10 +43,11 @@ body{
 
 .image-wrapper{
     width: 50vw;
+    justify-content: center;
 }
 
 .image-wrapper img{
-    width: 100%;
+    width: 80%;
     height: 80vh;
 }
 
@@ -93,7 +95,7 @@ body{
 .btn:hover{
     background-color: var(--corBotoesHover);
     transform: translate(0, -2px);
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
     letter-spacing: .5px;
 }
 .btn:active{
