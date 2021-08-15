@@ -114,4 +114,17 @@ body{
     z-index: -1;
 }
 
+@media only screen and (max-width: 1017px ){
+    .image-wrapper{
+        display: none;
+        visibility: hidden;
+    }
+    .stopwatch-wrapper{
+        width: 100vw;
+    }
+    .circle{
+        clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    }
+}
+
 

@@ -13,7 +13,7 @@ var stopWatch = null
 function start() {
     stopWatch = setInterval(() => timer(), time);
     buttonStart.disabled = 'true'
-    verAi()
+    disable()
 }
 
 
@@ -48,7 +48,7 @@ function reset() {
     buttonStart.style.backgroundColor = '#7e57c2'
 }
 
-function verAi() {
+function disable() {
     if (buttonStart.disable == '') {
         console.log('Enabled');
     }
