@@ -1,4 +1,5 @@
 "use strict"
+
 const buttonStart = document.querySelector('[data-js="start"]')
 const buttonStop = document.querySelector('[data-js="stop"]')
 const buttonReset = document.querySelector('[data-js="reset"]')
@@ -28,14 +29,17 @@ function timer() {
             hours++
         }
     }
+
     var format = (hours < 10 ? "0" + hours : hours)  + " : " + (minutes < 10 ? "0" + minutes : minutes) + " : " + (seconds < 10 ? "0" + seconds : seconds)
     numbers.innerHTML = format
 }
+
 function stop() {
     clearInterval(stopWatch)
     buttonStart.disabled = ''
     buttonStart.style.backgroundColor = '#7e57c2'
 }
+
 function reset() {
     clearInterval(stopWatch)
     hours = 0
@@ -45,6 +49,7 @@ function reset() {
     buttonStart.disabled = ''
     buttonStart.style.backgroundColor = '#7e57c2'
 }
+
 function disable() {
     if (buttonStart.disable == '') {
         console.log('Enabled');
@@ -52,6 +57,7 @@ function disable() {
         buttonStart.style.backgroundColor = '#9c7ad8'
     }
 }
+
 buttonStart.addEventListener('click', start)
 buttonStop.addEventListener('click', stop)
 buttonReset.addEventListener('click', reset)

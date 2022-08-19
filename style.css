@@ -14,7 +14,6 @@
     --corBotoesHover: #673ab7;
     --corTextos: white;
     --corFundo: #5f39b6;
-    
 }   
 
 .flex{
@@ -22,14 +21,6 @@
     align-items: center;
 }
 
-.center{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Estilização do documento */
 body{
     background-color: var(--corFundo);
     animation-name: appear;
@@ -71,30 +62,32 @@ body{
 
 .numbers-stopwatch{
     color: var(--corTextos);    
-    font-size: 2rem;
+    font-size: clamp(20px, 2vw, 40px);
     font-weight: 900;
-    font-family: sans-serif !important;
+    font-family: sans-serif;
     text-align: center;   
 }
 
 .buttons-wrapper{
     width: 60%;
     justify-content: space-evenly;
-
 }
 
 .btn{
-    width: 80px;
-    height: 40px;
+    width: 7vw;
+    height: 5vh;
     cursor: pointer;
     transition: all ease .5s;
+    margin-right: 2vw;
     
     background: var(--corBotoes);
     color: white;
     font-weight: 800;
     border: none;
     border-radius: 20px;
+    font-size: clamp(14px, 1.3vw, 40px);
 }
+
 .btn:hover{
     background-color: var(--corBotoesHover);
     transform: translate(0, -2px);
@@ -137,27 +130,21 @@ body{
         width: 100vw;
     }
     .circle{
-        clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+        display: none;
+    }
+
+    .btn{
+        width: 10vw;
+        min-width: 70px;
     }
 }
 
 
-@media only screen and (max-width: 426px){
+@media only screen and (min-width: 1440px){
     .stopwatch{
-        width: 200px;
-        height: 200px;
-        border: 2px solid var(--corTextos);
+        width: 500px;
+        height: 500px;
     }
-    .numbers-stopwatch{
-        font-size: 1.5rem;
-    }
-    .btn{
-        width: 50px;
-        height: 30px;
-        font-size: .5rem;
-    }
-        
-        
 }
 
 
